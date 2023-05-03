@@ -9,18 +9,9 @@ pipeline {
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
     }
     stages {
-        stage("init") {
-            steps {
-                script {
-                   gv = load "script.groovy"
-                }
-            }
-        }
         stage("build") {
             steps {
-                script {
-                    gv.buildApp()
-                }
+                echo "build app ..."
             }
         }
         stage("test") {
@@ -30,9 +21,7 @@ pipeline {
                 }
             }
             steps {
-                script {
-                    gv.testApp()
-                }
+                echo "test the application"
             }
         }
         stage("deploy") {
