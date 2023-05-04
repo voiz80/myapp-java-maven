@@ -2,7 +2,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = 'voiz80/my-repo:java-maven-1.1'
+        IMAGE_NAME = 'voiz80/my-repo:jma-1.1.'
     }
     stages {
         stage('build app') {
