@@ -2,6 +2,18 @@
 ### Deploy on k8 AWS
 
 #### First we need created EKS on AWS
+- Example:
+```
+eksctl create cluster \
+--name demo-cluster \
+--version 1.25 \
+--region eu-central-1 \
+--nodegroup-name demo-nodes \
+--node-type t2.micro \
+--nodes 2 \
+--nodes-min 1 \
+--nodes-max 3
+```
 
 ### On Jenkins server need to install and configure
 
